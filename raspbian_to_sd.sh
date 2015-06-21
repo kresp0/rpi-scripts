@@ -67,6 +67,7 @@ then
   echo "### Write image failed :("
   exit 1
 else
+  sync
   echo "### Done! :)"
 fi
 
