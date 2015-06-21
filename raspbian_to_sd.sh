@@ -49,10 +49,6 @@ fi
 echo "### Please wait, calculating checksum..."
 DOWNLOADSHA1=`sha1sum /tmp/rpi/raspbian.zip  | awk '{print $1}'`
 WEBSHA1=`curl 2> /dev/null "https://www.raspberrypi.org/downloads/"  | grep raspbian_latest -A5 | grep SHA  | awk -F '>' '{print $5}'  | awk -F '<' '{print $1}'`
-# also, now they banned robots :( http://downloads.raspberrypi.org/robots.txt
-#echo '### Go to http://www.raspberrypi.org/downloads/ , search "Raspbian" and click on "More info +"'
-#echo "### Copy and paste here the SHA1, the press [Enter] (remove the spaces)"
-#read WEBSHA1
 
 if [ "$DOWNLOADSHA1" == "$WEBSHA1" ]; then
   echo "### Checksum OK: $WEBSHA1"
