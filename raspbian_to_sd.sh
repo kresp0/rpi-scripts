@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Download, verify  and write Raspbian to some SD card
+# Download, verify and write Raspbian to some SD card
 #
 # Santiago Crespo 2014
 # License: CC0 https://creativecommons.org/publicdomain/zero/1.0/
